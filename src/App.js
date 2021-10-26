@@ -7,6 +7,9 @@ import Login from './Pages/Login/Login/Login';
 import Header from './Pages/Shared/Header/Header';
 import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import AddService from './Pages/AddService/AddService';
+import ManageServices from './Pages/ManageServices/ManageServices';
+require( 'dotenv' ).config();
 
 
 function App () {
@@ -28,6 +31,12 @@ function App () {
             <PrivateRoute exact path="/booking/:serviceId">
               <Booking></Booking>
             </PrivateRoute>
+            <Route exact path="/addService">
+              <AddService></AddService>
+            </Route>
+            <Route exact path="/manageServices">
+              <ManageServices></ManageServices>
+            </Route>
             <Route exact path="*">
               <Error404></Error404>
             </Route>
