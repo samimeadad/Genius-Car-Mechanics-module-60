@@ -8,7 +8,7 @@ const AddService = () => {
 
     const onSubmit = data => {
         console.log( data );
-        axios.post( 'http://localhost:5000/services', data )
+        axios.post( 'https://radiant-scrubland-25175.herokuapp.com/services', data )
             .then( res => {
                 if ( res.data.insertedId ) {
                     alert( 'Data Added' );
